@@ -1,0 +1,31 @@
+import React from 'react'
+import propTypes from 'prop-types'
+import menu from '../propTypes.js'
+
+const MenuComponent = ({brand, items}) => {
+  return(
+  <nav id="navbar">
+    <div id="brand">
+      <a href={brand.link}>{brand.text}</a>
+    </div>
+    <div id="hamburger">
+      <i className="fa fa-bars"></i>
+    </div>
+    <div id="menu">
+      <ul>
+        {items.map(item =>
+          <li>
+            <a href={item.link}>
+              {item.text}
+            </a>
+          </li>
+        )}
+      </ul>
+    </div>
+  </nav>
+)}
+
+MenuComponent.propTypes = menu
+
+
+export default MenuComponent

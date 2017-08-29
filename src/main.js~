@@ -1,0 +1,16 @@
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import IndexContainer from './containers/IndexContainer.jsx'
+import 'font-awesome-webpack'
+import './css/queries.css'
+
+
+export default class App extends React.Component {
+  render() {
+    return(
+      <Router>
+          <Route path="/" component={IndexContainer} />
+      </Router>
+    )
+  }
+}

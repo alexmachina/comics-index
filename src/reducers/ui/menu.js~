@@ -1,0 +1,18 @@
+import { evolve } from 'ramda'
+
+const initialState = {
+    visible: Boolean(window.innerWidth > 640)
+}
+
+export default function menu(state = initialState, action) {
+    switch (action.type) {
+    case 'TOGGLE_MENU_VISIBLE':
+	let transformation = {
+	    visible: !state.visible
+	}
+	console.log(evolve(transformation, state))
+	return evolve(transformation, state)
+    default:
+	return state
+    }
+}
