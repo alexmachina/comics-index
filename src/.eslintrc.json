@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb",
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": 0,
+    "camelcase": 0
+  },
+  "env" : {
+    "browser":true
+  },
+  "globals": {
+    "window": true,
+    "jest/globals" : true
+  },
+  "plugins": [ "jest" ]
+
+}

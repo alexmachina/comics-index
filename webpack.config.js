@@ -12,7 +12,8 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
+            presets: ['es2015','react'],
+            plugins: ['transform-runtime']
         }
       },
 
@@ -50,7 +51,7 @@ module.exports = {
             test: /test\.js$/,
             use: 'mocha-loader',
             exclude: /node_modules/,
-        }p
+        }
 
 
     ]

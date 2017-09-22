@@ -1,5 +1,0 @@
-export function toggle_menu_visible() {
-    return {
-	type: 'SET_MENU_VISIBLE'
-    }
-}

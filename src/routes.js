@@ -4,23 +4,23 @@ export const brand = {
 }
 
 export const menuItems = [
-  { 
+  {
     text: 'Writters',
-    link: '/#/writters'
+    link: '/writters'
   },
 
   {
     text: 'Artists',
-    link: '/#/artists'
+    link: '/artists'
   },
 
   {
     text: 'Comics',
-    link: '/#/comics'
+    link: '/comics'
   },
 
   {
     text: 'Settings',
-    link: '/#/settings'
+    link: '/settings'
   }
 ]

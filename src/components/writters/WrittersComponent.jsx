@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PersonsViewContainer from '../containers/persons/PersonsViewContainer'
+import Jumbotron from '../../lib/ui/Jumbotron.jsx'
+import PersonsComponent from '../persons/PersonsComponent'
 
-const WrittersComponent = ({writters}) => (
+const WrittersComponent = ({writters, onWritterPropChange, errorMessage}) => (
     <div>
-      <header class="jumbotron">
-	<h1>Writters</h1>
-      </header>
+      <Jumbotron backgroundColor="blue" text="Writters"/>
       <article>
-	<PersonsViewContainer persons={writters} />
+	<h1>{errorMessage}</h1>
+        <PersonsComponent
+            persons={writters}
+            onPersonPropChange={onWritterPropChange}
+          />
       </article>
     </div>
 )
@@ -16,10 +19,17 @@ const WrittersComponent = ({writters}) => (
 WrittersComponent.propTypes = {
     writters: PropTypes.arrayOf(PropTypes.shape({
 	fullname: PropTypes.string,
-	profilePicUrl: PropTypes.string }))
+	profilePicUrl: PropTypes.string
+    }))
+}
+
+WrittersComponent.propTypes = {
+    writters: PropTypes.arrayOf(PropTypes.shape({
+        fullname: PropTypes.string,
+        profilePicUrl: PropTypes.string
+    })),
+    onWritterPropChange: PropTypes.func,
+    errorMessage: PropTypes.string
 }
 
 export default WrittersComponent
-
-
-
